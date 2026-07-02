@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "product_id": "hr",
+  "product_name": "HRTasksAI",
+  "official_domain": "hrtasksai.com",
+  "official_github_repo": "https://github.com/laudoluxDev/hrtasksai-mcp",
+  "official_package": "@tasksai/install",
+  "installer": {
+    "preferred": "npx",
+    "npx": {
+      "command": "npx",
+      "args": [
+        "@tasksai/install",
+        "hr",
+        "--source",
+        "https://github.com/laudoluxDev/hrtasksai-mcp"
+      ],
+      "requires": [
+        "node",
+        "npm",
+        "npx"
+      ]
+    }
+  },
+  "supported_clients": [
+    "claude_desktop",
+    "cursor",
+    "windsurf",
+    "codex"
+  ],
+  "auth": {
+    "method": "browser_device_flow",
+    "connect_url": "https://hrtasksai.com/connect",
+    "fallback": "license_key"
+  },
+  "security": {
+    "require_domain_verification": true,
+    "require_repo_verification": true,
+    "disallow_arbitrary_manifest_commands": true,
+    "native_installer_user_approval_required": true
+  },
+  "health_check": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "hr",
+      "doctor"
+    ]
+  },
+  "uninstall": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "hr",
+      "uninstall"
+    ]
+  },
+  "support": {
+    "url": "https://hrtasksai.com/support",
+    "email": "support@hrtasksai.com"
+  }
+}
